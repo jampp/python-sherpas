@@ -13,7 +13,7 @@ alias pyclean='find . -name "*.pyc" -exec rm -rf {} \; && find . -name "*.so" -e
 Note: due to a current bug in sharedbuffers you can't install cython, chorde and sharedbuffers using
 `pip install -r` you need to install chython and chorde first and then install sharedbuffers
 
-#Cython Example
+# Cython Example
 build
 ```
 python setup.py build_ext --inplace
@@ -36,7 +36,7 @@ docker run -v $PWD:/sherpas -it sherpas /bin/bash -c 'cd sherpas && python setup
 docker run -v $PWD:/sherpas -it sherpas /bin/bash -c 'cd sherpas && python setup.py build_ext --inplace &&  python -m timeit -s "import timeit;from examples.cython import std_dev as s,std_dev_cython as sc,std_dev_pure as scp;a=[v for v in range(1000000)]" -n 100 "scp.std_dev(a)"'
 ```
 
-#Shared Buffers
+# Shared Buffers
 ```
 from examples.sharedbuffers import pycon
 from random import choice
